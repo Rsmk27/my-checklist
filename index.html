@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Checklist - Stay Organized</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 My Checklist</h1>
+            <p class="tagline">Stay organized and never forget a thing</p>
+        </header>
+
+        <div class="create-section">
+            <h2>Create New Checklist Group</h2>
+            <div class="input-group">
+                <input type="text" id="groupName" placeholder="Enter group name (e.g., Daily Tasks)" />
+                <button id="createGroup" class="btn btn-primary">Create Group</button>
+            </div>
+        </div>
+
+        <div id="checklistContainer" class="checklist-container">
+            <!-- Checklist groups will be dynamically added here -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
