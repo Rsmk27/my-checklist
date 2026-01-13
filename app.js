@@ -2,7 +2,12 @@
 class ChecklistApp {
     constructor() {
         this.groups = this.loadFromLocalStorage();
+        this.idCounter = Date.now();
         this.init();
+    }
+
+    generateId() {
+        return this.idCounter++;
     }
 
     init() {
@@ -38,7 +43,7 @@ class ChecklistApp {
         }
 
         const newGroup = {
-            id: Date.now(),
+            id: this.generateId(),
             name: groupName,
             items: []
         };
@@ -62,7 +67,7 @@ class ChecklistApp {
         const group = this.groups.find(g => g.id === groupId);
         if (group) {
             const newItem = {
-                id: Date.now(),
+                id: this.generateId(),
                 text: itemText,
                 completed: false
             };
